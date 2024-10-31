@@ -3,6 +3,12 @@
     <style name="Base.Theme.Smartmath" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- In particular it defines the status bar color-->
+        <item name="colorPrimary">@color/bars_color</item>
+
+        <!-- Set color of default navigation panel -->
+        <item name="android:navigationBarColor">@color/bars_color</item>
     </style>
 
     <style name="Theme.Smartmath" parent="Base.Theme.Smartmath" />

@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bars_color">#FF57554A</color>
+    <color name="background_0">#F4F6F6</color>
+
+    <!-- text -->
+    <color name="black_light">#FF252525</color>
 </resources>
