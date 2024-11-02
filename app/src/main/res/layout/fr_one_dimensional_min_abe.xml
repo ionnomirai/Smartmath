@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/image_of_background_fr_one_dim"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/paper_four" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TitleTopScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/dichotomy_name_underlined"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExpression"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="-2dp"
+        android:text="@string/title_expression"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etExpression"
+        style="@style/EditTextRegularOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="31dp"
+        android:ems="10"
+        android:inputType="text|textMultiLine"
+        android:hint="@string/hint_expression_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvBorders"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/title_borders"
+        app:layout_constraintStart_toStartOf="@+id/tvExpression"
+        app:layout_constraintTop_toBottomOf="@+id/etExpression" />
+
+    <TextView
+        android:id="@+id/tvBracketStart"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/char_bracket_start"
+        app:layout_constraintTop_toBottomOf="@id/tvBorders"
+        app:layout_constraintStart_toStartOf="@id/tvBorders"/>
+
+    <EditText
+        android:id="@+id/etBorderA"
+        style="@style/EditTextRegularOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:ems="10"
+        android:hint="@string/char_zero"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBracketStart"
+        app:layout_constraintEnd_toStartOf="@id/tvSemicolonOne"
+        app:layout_constraintStart_toEndOf="@id/tvBracketStart"
+        app:layout_constraintTop_toTopOf="@id/tvBracketStart" />
+
+    <TextView
+        android:id="@+id/tvSemicolonOne"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/char_semicolon"
+        android:layout_marginStart="90dp"
+        app:layout_constraintStart_toEndOf="@id/tvBracketStart"
+        app:layout_constraintTop_toTopOf="@id/tvBracketStart"
+        app:layout_constraintBottom_toBottomOf="@id/tvBracketStart"/>
+
+    <EditText
+        android:id="@+id/etBorderB"
+        style="@style/EditTextRegularOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:hint="@string/char_zero"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/tvSemicolonOne"
+        app:layout_constraintTop_toTopOf="@id/tvSemicolonOne"
+        app:layout_constraintBottom_toBottomOf="@id/tvSemicolonOne"
+        app:layout_constraintEnd_toStartOf="@id/tvBracketEnd"
+        />
+
+    <TextView
+        android:id="@+id/tvBracketEnd"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/char_bracket_end"
+        android:layout_marginStart="90dp"
+        app:layout_constraintTop_toTopOf="@id/tvBracketStart"
+        app:layout_constraintBottom_toBottomOf="@id/tvBracketStart"
+        app:layout_constraintStart_toEndOf="@id/tvSemicolonOne"
+        />
+
+    <TextView
+        android:id="@+id/tvAccuracy"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_accuracy"
+        android:layout_marginTop="33dp"
+        app:layout_constraintStart_toStartOf="@id/tvBorders"
+        app:layout_constraintTop_toBottomOf="@id/etBorderA"
+        />
+
+    <EditText
+        android:id="@+id/etAccuracy"
+        style="@style/EditTextRegularOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-12dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal|numberSigned"
+        android:hint="@string/hint_float_value"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/etExpression"
+        app:layout_constraintEnd_toEndOf="@id/etExpression"
+        app:layout_constraintTop_toBottomOf="@id/tvAccuracy"/>
+
+    <Button
+        android:id="@+id/bFindSolution"
+        style="@style/ButtonSemibold500"
+        android:text="@string/find_solution"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/etAccuracy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDividerFirst"
+        style="@style/DividerLine"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bFindSolution"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDividerSecond"
+        style="@style/DividerLine"
+        app:layout_constraintTop_toBottomOf="@id/tvDividerFirst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDividerThird"
+        style="@style/DividerLine"
+        app:layout_constraintTop_toBottomOf="@id/tvDividerSecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSolution"
+        style="@style/TitleTopScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/title_solution_underlined"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDividerThird" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gHidenSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvStep,tvXEnd,tvFEnd,bShowDetailedSolution" />
+
+    <TextView
+        android:id="@+id/tvStep"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tvAccuracy"
+        app:layout_constraintTop_toBottomOf="@id/tvSolution"
+        tools:text="Step: 9" />
+
+    <TextView
+        android:id="@+id/tvXEnd"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/tvStep"
+        app:layout_constraintTop_toBottomOf="@id/tvStep"
+        tools:text="x_end = 1.234567890123" />
+
+    <TextView
+        android:id="@+id/tvFEnd"
+        style="@style/TextRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/tvXEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvXEnd"
+        tools:text="F(x_end) = 1.234567890123" />
+
+    <Button
+        android:id="@+id/bShowDetailedSolution"
+        style="@style/ButtonSemibold500"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="25sp"
+        android:text="@string/title_detailed_solution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFEnd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

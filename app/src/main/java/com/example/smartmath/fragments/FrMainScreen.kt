@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import com.example.smartmath.R
 import com.example.smartmath.databinding.FrMainScreenBinding
 
 class FrMainScreen : Fragment() {
@@ -31,7 +33,11 @@ class FrMainScreen : Fragment() {
 
         binding.apply {
             bDichotomy.setOnClickListener {
-                Toast.makeText(context, "Move to the Dichotomy screen", Toast.LENGTH_SHORT).show()
+                parentFragmentManager.commit {
+                    replace(R.id.fcvMain, FrOneDimensionalMinABE())
+                    setReorderingAllowed(true)
+                    addToBackStack("Move from FrMainScreen to FrOneDimensionalMinABE")
+                }
             }
             bGoldenSection.setOnClickListener {
                 Toast.makeText(context, "Move to the Golden Section screen", Toast.LENGTH_SHORT)
