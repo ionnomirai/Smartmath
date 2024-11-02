@@ -6,6 +6,9 @@
     <color name="bars_color">#FF57554A</color>
     <color name="background_0">#F4F6F6</color>
 
+    <color name="button_background_0">#6B6B6B</color>
+    <color name="button_text_0">#FDFEFF</color>
+
     <!-- text -->
     <color name="black_light">#FF252525</color>
 </resources>

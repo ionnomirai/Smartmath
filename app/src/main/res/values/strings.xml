@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Smartmath</string>
+
+    <!-- Common -->
+    <string name="select_an_method">Please, choose a method</string>
+    <string name="dichotomy_name">Dichotomy</string>
+    <string name="golden_section_name">Golden Section</string>
+
+    <!--Content description-->
+    <string name="image_of_cube">Image of a Rubik\'s cube. A Rubik\'s cube with parts slightly shifted in different directions</string>
+    <string name="image_of_background_1">Background image. It shows a blue background, and a gray stripe running across the top left of the screen. On the left side of the image there is a decorative rope that goes from top to bottom.</string>
 </resources>
