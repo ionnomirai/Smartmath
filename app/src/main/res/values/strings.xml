@@ -31,4 +31,5 @@
     <string name="image_of_cube">Image of a Rubik\'s cube. A Rubik\'s cube with parts slightly shifted in different directions</string>
     <string name="image_of_background_main_screen">Background image. It shows a blue background, and a gray stripe running across the top left of the screen. On the left side of the image there is a decorative rope that goes from top to bottom.</string>
     <string name="image_of_background_fr_one_dim">Background. The background shows a yellowish, squared notebook sheet.</string>
+    <string name="image_help_math">Help with special math operations. The icon is a white question mark placed on a blue circle.</string>
 </resources>

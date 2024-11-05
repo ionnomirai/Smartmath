@@ -40,6 +40,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
+    <ImageView
+        android:id="@+id/ivHelp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/image_help_math"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExpression"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvExpression"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/ic_sign_help" />
+
     <EditText
         android:id="@+id/etExpression"
         style="@style/EditTextRegularOne"
