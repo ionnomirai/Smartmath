@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrMainScreenBinding
+import com.example.smartmath.utils.MethodNames
 
 class FrMainScreen : Fragment() {
     private var _binding: FrMainScreenBinding? = null
@@ -34,14 +35,17 @@ class FrMainScreen : Fragment() {
         binding.apply {
             bDichotomy.setOnClickListener {
                 parentFragmentManager.commit {
-                    replace(R.id.fcvMain, FrOneDimensionalMinABE())
+                    replace(R.id.fcvMain, FrOneDimensionalMinABE(MethodNames.Dichotomy))
                     setReorderingAllowed(true)
-                    addToBackStack("Move from FrMainScreen to FrOneDimensionalMinABE")
+                    addToBackStack("Move from FrMainScreen to FrOneDimensionalMinABE (Dichotomy)")
                 }
             }
             bGoldenSection.setOnClickListener {
-                Toast.makeText(context, "Move to the Golden Section screen", Toast.LENGTH_SHORT)
-                    .show()
+                parentFragmentManager.commit {
+                    replace(R.id.fcvMain, FrOneDimensionalMinABE(MethodNames.GoldenSection))
+                    setReorderingAllowed(true)
+                    addToBackStack("Move from FrMainScreen to FrOneDimensionalMinABE (Golden section)")
+                }
             }
         }
     }
