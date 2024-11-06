@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/tvHelpSign"
-        android:layout_width="180dp"
+        android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:gravity="top"
         tools:text="'pi' or \u03C0  = "

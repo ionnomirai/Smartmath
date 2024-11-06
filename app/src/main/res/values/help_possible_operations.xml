@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="help_possible_operations">
+        <item>\'pi\' or \u03C0  = \n to "3.14…"</item>
+        <item>pow (x, y)\nor x^n = \n Raising a number to a power:\n x - number\n n - degree</item>
+        <item>sqrt(x) = \n Square root. x - number</item>
+        <item>cbrt(x) = \n Cubic root</item>
+        <item>e = \n 2.71…</item>
+        <item>asin(x) = \n Arc sine</item>
+        <item>acos(x) = \n Arc cosine</item>
+        <item>atan(x) = \n Arc tangent</item>
+        <item>sin(x) = \n Sine</item>
+        <item>cos(x) = \n Cosine</item>
+        <item>tan(x) = \n Tangent</item>
+    </string-array>
+</resources>

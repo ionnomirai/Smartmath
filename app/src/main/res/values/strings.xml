@@ -37,4 +37,5 @@
     <string name="image_of_background_main_screen">Background image. It shows a blue background, and a gray stripe running across the top left of the screen. On the left side of the image there is a decorative rope that goes from top to bottom.</string>
     <string name="image_of_background_fr_one_dim">Background. The background shows a yellowish, squared notebook sheet.</string>
     <string name="image_help_math">Help with special math operations. The icon is a white question mark placed on a blue circle.</string>
+    <string name="image_help_close">Image of the cross icon. Closes the help screen.</string>
 </resources>

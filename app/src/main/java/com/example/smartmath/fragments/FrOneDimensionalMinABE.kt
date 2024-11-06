@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrOneDimensionalMinAbeBinding
+import com.example.smartmath.dialogs.DialogHelp
 import com.example.smartmath.methods.dichotomy.dataclasses.StateDichotomy
 import com.example.smartmath.methods.dichotomy.dichotomy
 import com.example.smartmath.utils.MethodNames
@@ -79,7 +80,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             }
 
             ivHelp.setOnClickListener {
-                Toast.makeText(context, "move to help", Toast.LENGTH_SHORT).show()
+                DialogHelp().show(parentFragmentManager, "Open help dialog")
             }
         }
     }

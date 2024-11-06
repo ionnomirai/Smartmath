@@ -9,6 +9,8 @@
     <color name="button_background_0">#6B6B6B</color>
     <color name="button_text_0">#FDFEFF</color>
 
+    <color name="temp_d_help_background_">#FFFDF9</color>
+
     <!-- text -->
     <color name="black_light">#FF252525</color>
 </resources>
