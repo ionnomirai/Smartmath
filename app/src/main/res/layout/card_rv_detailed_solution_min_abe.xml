@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        app:cardElevation="7dp"
+        app:cardBackgroundColor="@color/temp_d_help_background_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStep"
+                android:fontFamily="@font/poppins_medium_500"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="Step: 0" />
+
+            <TextView
+                android:id="@+id/tvAStep"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="a0 = 2.0" />
+
+            <TextView
+                android:id="@+id/tvBStep"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="b0 = 2.0" />
+
+            <TextView
+                android:id="@+id/tvMedium"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="xMedium = 2.5" />
+
+            <TextView
+                android:id="@+id/tvXFirst"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="x1 = 2.4995" />
+
+            <TextView
+                android:id="@+id/tvXSecond"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="x2 = 2.5005" />
+
+            <TextView
+                android:id="@+id/tvFFirst"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="F1 =  120.45131561875013" />
+
+            <TextView
+                android:id="@+id/tvFSecond"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="F2 = 120.92381563125025" />
+
+            <TextView
+                android:id="@+id/tvFMatch"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                tools:text="F1 < F2" />
+
+            <TextView
+                android:id="@+id/tvAStepPlusOne"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="a0+1 = 2.0" />
+
+            <TextView
+                android:id="@+id/tvBStepPlusOne"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="b0+1 = 2.5" />
+
+            <TextView
+                android:id="@+id/tvCondition"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Condition |b0+1 - a0+1| = 0.5" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvXFEnd"
+                    style="@style/TextListDetailed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="F_x_end = 2.00048828125" />
+
+                <ImageView
+                    android:id="@+id/ivDone"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/image_check_done"
+                    app:srcCompat="@drawable/ic_check" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvXEnd"
+                style="@style/TextListDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="x_end = 2.00048828125" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,15 +36,23 @@
     <!--Text-->
     <style name="TitleTopScreen" parent="Widget.AppCompat.TextView">
         <item name="android:fontFamily">@font/poppins_semibold_600</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/black_light</item>
         <item name="android:layout_marginTop">20dp</item>
     </style>
 
     <style name="TextRegular" parent="Widget.AppCompat.TextView">
         <item name="android:fontFamily">@font/poppins_regular_400</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/black_light</item>
+    </style>
+
+    <style name="TextListDetailed" parent="TextRegular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
     </style>
 
     <style name="DividerLine" parent="Widget.AppCompat.TextView">
