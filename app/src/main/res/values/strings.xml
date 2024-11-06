@@ -18,6 +18,10 @@
     <string name="title_x_end">x_end = %1$s</string>
     <string name="title_f_x_end">F(x_end) = %1$s</string>
 
+    <string name="title_help_complex_op">Possible complex operations</string>
+    <string name="title_element">Element:</string>
+    <string name="title_description">Description:</string>
+
     <string name="hint_expression_1">3x^4 + 20x^3 - 90x -84</string>
     <string name="hint_float_value">0.001</string>
 
