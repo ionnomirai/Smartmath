@@ -16,6 +16,7 @@ fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateDi
         val middleCur = findMiddle(curAk, curBk)
         val x1 = findX12(middleCur, e, '-')
         val x2 = findX12(middleCur, e, '+')
+        var fx1LessThanfx2 = false
 
         val currentState = StateDichotomy(
             a = curAk,
@@ -29,6 +30,7 @@ fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateDi
 
         if (currentState.f1 < currentState.f2) {
             curBk = middleCur
+            fx1LessThanfx2 = true
         } else {
             curAk = middleCur
         }
@@ -48,7 +50,7 @@ fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateDi
             )
             break
         }
-        stateList.add(currentState.copy(aPlOne = curAk, bPlOne = curBk, condition = condition))
+        stateList.add(currentState.copy(aPlOne = curAk, bPlOne = curBk, fX1LessThanFX2 = fx1LessThanfx2, condition = condition))
     }
 
     return stateList

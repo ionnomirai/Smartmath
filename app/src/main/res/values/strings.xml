@@ -42,10 +42,11 @@
     <string name="image_help_close">Image of the cross icon. Closes the help screen.</string>
     <string name="image_button_home">Home button. Shows a blue house icon.</string>
     <string name="image_check_done">Green check mark image. Indicator that the solution has been found.</string>
+    <string name="image_check_undone">Image of the red cross icon. Indicator that the solution hasn\'t been found yet.</string>
 
     <!-- Detailed solution min abe -->
     <string name="char_plus_num">%1$s%2$s = %3$s</string> <!--a0 = 2.0-->
-    <string name="x_medium">xMedium = %1$s</string>
+    <string name="x_midpoint">xMidpoint = %1$s</string>
     <string name="char_plus_one_plus_num">%1$s%2$s+1 = %3$s</string> <!--a0 = 2.0-->
     <string name="condition_detailed">Condition |b%1$s+1 - a%1$s+1| = %2$s</string>
     <string name="x_end">x_end = %1$s</string>

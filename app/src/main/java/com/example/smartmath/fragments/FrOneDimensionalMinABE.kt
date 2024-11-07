@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrOneDimensionalMinAbeBinding
 import com.example.smartmath.dialogs.DialogHelp
@@ -26,7 +27,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             }
         }
 
-    private var solutionListDichotomy = listOf<StateDichotomy>()
+    private var solutionList = listOf<StateDichotomy>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -56,11 +57,11 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
                     
                     when(methodName){
                         MethodNames.Dichotomy ->{
-                            solutionListDichotomy = dichotomy(a, b, accuracy, expressionInput)
+                            solutionList = dichotomy(a, b, accuracy, expressionInput)
                             setAndOpenHideData(
-                                step = (solutionListDichotomy.size - 1).toString(),
-                                xend = solutionListDichotomy.last().xEnd.toString(),
-                                fXEnd = solutionListDichotomy.last().fEnd.toString()
+                                step = (solutionList.size - 1).toString(),
+                                xend = solutionList.last().xEnd.toString(),
+                                fXEnd = solutionList.last().fEnd.toString()
                             )
                         }
                         MethodNames.GoldenSection -> ""
@@ -76,7 +77,11 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             }
 
             bShowDetailedSolution.setOnClickListener {
-                Toast.makeText(context, "move to detailed solution", Toast.LENGTH_SHORT).show()
+                parentFragmentManager.commit {
+                    replace(R.id.fcvMain, FrOneDimMinABEDetails(solutionList, methodName))
+                    setReorderingAllowed(true)
+                    addToBackStack("Move from FrOneDimensionalMinABE to FrOneDimMinABEDetails")
+                }
             }
 
             ivHelp.setOnClickListener {
