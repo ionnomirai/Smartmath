@@ -1,12 +1,12 @@
 package com.example.smartmath.methods.dichotomy
 
-import com.example.smartmath.methods.dichotomy.dataclasses.StateDichotomy
+import com.example.smartmath.methods.dataclasses.StateMinABE
 import net.objecthunter.exp4j.ExpressionBuilder
 import kotlin.math.abs
 
-fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateDichotomy>{
+fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateMinABE>{
 
-    val stateList = mutableListOf<StateDichotomy>() // save all iterations
+    val stateList = mutableListOf<StateMinABE>() // save all iterations
     var curAk: Double = a // left border
     var curBk: Double = b // right border
     var condition = abs(curBk - curAk) // temp condition (it defines should we go further or stop
@@ -18,7 +18,7 @@ fun dichotomy(a: Double, b: Double, e: Double, expression: String): List<StateDi
         val x2 = findX12(middleCur, e, '+')
         var fx1LessThanfx2 = false
 
-        val currentState = StateDichotomy(
+        val currentState = StateMinABE(
             a = curAk,
             b = curBk,
             middle = middleCur,

@@ -9,12 +9,12 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.RecyclerView
 import com.example.smartmath.R
 import com.example.smartmath.databinding.CardRvDetailedSolutionMinAbeBinding
-import com.example.smartmath.methods.dichotomy.dataclasses.StateDichotomy
+import com.example.smartmath.methods.dataclasses.StateMinABE
 import com.example.smartmath.utils.MethodNames
 import com.example.smartmath.utils.getBoldText
 
 class AdapterDetailedSolutionMinABE(
-    val data: List<StateDichotomy>,
+    val data: List<StateMinABE>,
     val method: MethodNames
 ) : RecyclerView.Adapter<AdapterDetailedSolutionMinABE.AdapterDetailedViewHolder>() {
 
@@ -39,7 +39,7 @@ class AdapterDetailedSolutionMinABE(
 
 
 
-        fun setDataDichotomy(el: StateDichotomy) {
+        fun setDataDichotomy(el: StateMinABE) {
             val position = this.adapterPosition.toString() // current position in the data list
             innerBinding.apply {
                 tvStep.text = getAdjustedText(R.string.title_step, ":", position)

@@ -11,8 +11,9 @@ import androidx.fragment.app.commit
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrOneDimensionalMinAbeBinding
 import com.example.smartmath.dialogs.DialogHelp
-import com.example.smartmath.methods.dichotomy.dataclasses.StateDichotomy
+import com.example.smartmath.methods.dataclasses.StateMinABE
 import com.example.smartmath.methods.dichotomy.dichotomy
+import com.example.smartmath.methods.goldenSection.goldenSection
 import com.example.smartmath.utils.MethodNames
 import com.example.smartmath.utils.getUnderlinedText
 import net.objecthunter.exp4j.ExpressionBuilder
@@ -27,7 +28,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             }
         }
 
-    private var solutionList = listOf<StateDichotomy>()
+    private var solutionList = listOf<StateMinABE>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,18 +55,19 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
 
                     // Test the base expression. We are looking for a possible mistake
                     getTestExpression(expressionInput)
-                    
+
+                    // solve the expression using the chosen method
                     when(methodName){
-                        MethodNames.Dichotomy ->{
-                            solutionList = dichotomy(a, b, accuracy, expressionInput)
-                            setAndOpenHideData(
-                                step = (solutionList.size - 1).toString(),
-                                xend = solutionList.last().xEnd.toString(),
-                                fXEnd = solutionList.last().fEnd.toString()
-                            )
-                        }
-                        MethodNames.GoldenSection -> ""
+                        MethodNames.Dichotomy ->solutionList = dichotomy(a, b, accuracy, expressionInput)
+                        MethodNames.GoldenSection -> solutionList = goldenSection(a, b, accuracy, expressionInput)
                     }
+                    // fill and open the hiden data
+                    setAndOpenHideData(
+                        step = (solutionList.size - 1).toString(),
+                        xend = solutionList.last().xEnd.toString(),
+                        fXEnd = solutionList.last().fEnd.toString()
+                    )
+
                 } catch (e: UnknownFunctionOrVariableException){
                     Toast.makeText(activity, "Wrong input", Toast.LENGTH_SHORT).show()
                 } catch (e: NumberFormatException){

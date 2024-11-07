@@ -1,6 +1,6 @@
-package com.example.smartmath.methods.dichotomy.dataclasses
+package com.example.smartmath.methods.dataclasses
 
-data class StateDichotomy(
+data class StateMinABE(
     val a: Double,
     val b: Double,
     val middle: Double? = null,

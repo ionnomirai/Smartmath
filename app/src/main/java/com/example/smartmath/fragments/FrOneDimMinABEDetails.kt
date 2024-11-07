@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrDetailedSolutionMinAbeBinding
 import com.example.smartmath.fragments.adapters.AdapterDetailedSolutionMinABE
-import com.example.smartmath.methods.dichotomy.dataclasses.StateDichotomy
+import com.example.smartmath.methods.dataclasses.StateMinABE
 import com.example.smartmath.utils.MethodNames
 import com.example.smartmath.utils.getUnderlinedText
 
 class FrOneDimMinABEDetails(
-    val data: List<StateDichotomy>,
+    val data: List<StateMinABE>,
     val methodName: MethodNames,
 ): Fragment() {
 
