@@ -14,7 +14,9 @@ import com.example.smartmath.dialogs.DialogHelp
 import com.example.smartmath.methods.dataclasses.StateMinABE
 import com.example.smartmath.methods.dichotomy.dichotomy
 import com.example.smartmath.methods.goldenSection.goldenSection
+import com.example.smartmath.utils.Directions
 import com.example.smartmath.utils.MethodNames
+import com.example.smartmath.utils.getTagFragment
 import com.example.smartmath.utils.getUnderlinedText
 import net.objecthunter.exp4j.ExpressionBuilder
 import net.objecthunter.exp4j.tokenizer.UnknownFunctionOrVariableException
@@ -82,7 +84,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
                 parentFragmentManager.commit {
                     replace(R.id.fcvMain, FrOneDimMinABEDetails(solutionList, methodName))
                     setReorderingAllowed(true)
-                    addToBackStack("Move from FrOneDimensionalMinABE to FrOneDimMinABEDetails")
+                    addToBackStack(getTagFragment(Directions.FromMethodMinABEToDetailed))
                 }
             }
 

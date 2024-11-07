@@ -4,14 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.smartmath.R
 import com.example.smartmath.databinding.FrDetailedSolutionMinAbeBinding
 import com.example.smartmath.fragments.adapters.AdapterDetailedSolutionMinABE
 import com.example.smartmath.methods.dataclasses.StateMinABE
+import com.example.smartmath.utils.Directions
 import com.example.smartmath.utils.MethodNames
+import com.example.smartmath.utils.getTagFragment
 import com.example.smartmath.utils.getUnderlinedText
 
 class FrOneDimMinABEDetails(
@@ -55,7 +57,12 @@ class FrOneDimMinABEDetails(
             }
 
             ibHome.setOnClickListener {
-                Toast.makeText(context, "Move to home", Toast.LENGTH_SHORT).show()
+                when(methodName){
+                    MethodNames.Dichotomy -> parentFragmentManager.popBackStack(
+                        getTagFragment(Directions.FromMainToDichotomy), FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                    MethodNames.GoldenSection -> parentFragmentManager.popBackStack(
+                        getTagFragment(Directions.FromMainToGoldenSection), FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                }
             }
         }
     }
