@@ -39,7 +39,10 @@ class AdapterDetailedSolutionMinABE(
         fun setData(el: StateMinABE, methodName: MethodNames) {
             val position = this.adapterPosition.toString() // current position in the data list
             innerBinding.apply {
-                setCommonFields(el, position) /* Set data for both Dichotomy and GoldenSection.*/
+                /* Set data for both Dichotomy and GoldenSection.*/
+                setCommonFields(el, position)
+
+                /* Set specific data, for each method */
                 when(methodName){
                     MethodNames.Dichotomy -> setDataDichotomy(el, position)
                     MethodNames.GoldenSection -> setDataGS()

@@ -42,6 +42,8 @@ class DialogHelp: DialogFragment(){
     /* get string-array with possible operations information */
     private fun getInstructions(): List<Pair<String, String>>{
         return activity?.let {
+            /*        old                                new
+            \'pi\' or \u03C0  = \n 3.14… --> 'pi\' or \u03C0  = to 3.14… */
             resources.getStringArray(R.array.help_possible_operations).map { entry ->
                 val (sign, description) = entry.split(" \n ")
                 sign to description

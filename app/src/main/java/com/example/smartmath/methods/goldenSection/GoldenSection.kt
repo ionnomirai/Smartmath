@@ -4,6 +4,7 @@ import android.util.Log
 import com.example.smartmath.methods.customExceptions.ComparisonFException
 import com.example.smartmath.methods.customExceptions.ConditionExcpetion
 import com.example.smartmath.methods.dataclasses.StateMinABE
+import com.example.smartmath.methods.dichotomy.solveExpression
 import net.objecthunter.exp4j.ExpressionBuilder
 import kotlin.math.abs
 import kotlin.math.pow
@@ -31,6 +32,7 @@ fun goldenSection(
         }
 
         val finalValues = findFinalValues(a = resultList.last().a, b = resultList.last().b, expression)
+        /* added final data to the last element in the list of iterations */
         resultList[resultList.size - 1] = resultList.last().copy(
             xEnd = finalValues.first,
             fEnd = finalValues.second
@@ -41,16 +43,6 @@ fun goldenSection(
         Log.d(TAG_GS, "Comparison of F(x) is null. It is mistake.")
     }
     return resultList
-}
-
-//private fun solveExpression(x: Double): Double = 3 * x.pow(4) + 20 * x.pow(3) - 90 * x - 84
-private fun solveExpression(input: String, x: Double): Double{
-    val variables = mapOf("x" to x)
-    val expression = ExpressionBuilder(input)
-        .variables(variables.keys)
-        .build()
-        .setVariables(variables)
-    return expression.evaluate()
 }
 
 // Creating the first element

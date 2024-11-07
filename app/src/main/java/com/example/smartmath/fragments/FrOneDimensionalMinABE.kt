@@ -1,6 +1,7 @@
 package com.example.smartmath.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             }
         }
 
+    /* The place where the solution will be stored. All iterations.*/
     private var solutionList = listOf<StateMinABE>()
 
     override fun onCreateView(
@@ -47,9 +49,15 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
         // create a title of this screen
         binding.tvTitle.text = getUnderlinedText(methodName.title)
 
+        // fill and open the hiden data if this solution saved
+        if (solutionList.isNotEmpty()){
+            setAndOpenHideData(solutionList.last(),solutionList.size-1)
+        }
+
         binding.apply {
             bFindSolution.setOnClickListener {
-                try{
+                try {
+                    /* Collecting the necessary data from the screen fields. */
                     val expressionInput = etExpression.text.toString()
                     val a = etBorderA.text.toString().toDouble()
                     val b = etBorderB.text.toString().toDouble()
@@ -59,27 +67,25 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
                     getTestExpression(expressionInput)
 
                     // solve the expression using the chosen method
-                    when(methodName){
-                        MethodNames.Dichotomy ->solutionList = dichotomy(a, b, accuracy, expressionInput)
-                        MethodNames.GoldenSection -> solutionList = goldenSection(a, b, accuracy, expressionInput)
+                    solutionList = when (methodName) {
+                        MethodNames.Dichotomy -> dichotomy(a, b, accuracy, expressionInput)
+                        MethodNames.GoldenSection -> goldenSection(a, b, accuracy, expressionInput)
                     }
-                    // fill and open the hiden data
-                    setAndOpenHideData(
-                        step = (solutionList.size - 1).toString(),
-                        xend = solutionList.last().xEnd.toString(),
-                        fXEnd = solutionList.last().fEnd.toString()
-                    )
 
-                } catch (e: UnknownFunctionOrVariableException){
+                    // fill and open the hiden data
+                    setAndOpenHideData(solutionList.last(),solutionList.size-1)
+
+                } catch (e: UnknownFunctionOrVariableException) {
                     Toast.makeText(activity, "Wrong input", Toast.LENGTH_SHORT).show()
-                } catch (e: NumberFormatException){
+                } catch (e: NumberFormatException) {
                     Toast.makeText(activity, "Empty input", Toast.LENGTH_SHORT).show()
-                } catch (e: Exception){
+                } catch (e: Exception) {
                     Toast.makeText(activity, "Error my", Toast.LENGTH_SHORT).show()
                 }
 
             }
 
+            /* move to the screen (fragment) with detailed solution (with information about each iteration */
             bShowDetailedSolution.setOnClickListener {
                 parentFragmentManager.commit {
                     replace(R.id.fcvMain, FrOneDimMinABEDetails(solutionList, methodName))
@@ -88,17 +94,19 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
                 }
             }
 
+            /* call help screen with information about additional math operations */
             ivHelp.setOnClickListener {
                 DialogHelp().show(parentFragmentManager, "Open help dialog")
             }
         }
     }
 
-    private fun setAndOpenHideData(step: String, xend: String, fXEnd: String){
+    /* When there is a solution, you need to open the hidden field for it. */
+    private fun setAndOpenHideData(el: StateMinABE, step: Int) {
         binding.apply {
-            tvStep.text = getString(R.string.title_step, step)
-            tvXEnd.text = getString(R.string.title_x_end, xend)
-            tvFEnd.text = getString(R.string.title_f_x_end, fXEnd)
+            tvStep.text = getString(R.string.title_step, step.toString())
+            tvXEnd.text = getString(R.string.title_x_end, el.xEnd.toString())
+            tvFEnd.text = getString(R.string.title_f_x_end, el.fEnd.toString())
             gHidenSolution.visibility = View.VISIBLE
 
             // reset bottom restriction for tvSolution
@@ -107,7 +115,8 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
         }
     }
 
-    private fun getTestExpression(expressionInput: String){
+    /* The point is that if something goes wrong, we will understand it at this stage and tell the user. */
+    private fun getTestExpression(expressionInput: String) {
         ExpressionBuilder(expressionInput)
             .variables("x")
             .build()

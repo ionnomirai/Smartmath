@@ -65,7 +65,7 @@ private fun findX12(m: Double, e: Double, sign: Char): Double =
         else -> throw Exception("incorrect sign")
     }
 
-private fun solveExpression(input: String, x: Double): Double {
+fun solveExpression(input: String, x: Double): Double {
     val variables = mapOf("x" to x)
     val expression = ExpressionBuilder(input)
         .variables(variables.keys)

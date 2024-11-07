@@ -43,6 +43,7 @@ class FrOneDimMinABEDetails(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /* Set the title, depending on which method was chosen. */
         binding.apply {
             tvTitleTop.text = when(methodName){
                 MethodNames.Dichotomy -> getUnderlinedText(getString(R.string.dichotomy_detailed))
@@ -56,6 +57,7 @@ class FrOneDimMinABEDetails(
                 adapter = adapterMy
             }
 
+            /* Return to the main screen, depending on which method was chosen. */
             ibHome.setOnClickListener {
                 when(methodName){
                     MethodNames.Dichotomy -> parentFragmentManager.popBackStack(

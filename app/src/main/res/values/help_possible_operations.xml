@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="help_possible_operations">
-        <item>\'pi\' or \u03C0  = \n to "3.14…"</item>
+        <item>\'pi\' or \u03C0  = \n 3.14…</item>
         <item>pow (x, y)\nor x^n = \n Raising a number to a power:\n x - number\n n - degree</item>
         <item>sqrt(x) = \n Square root. x - number</item>
         <item>cbrt(x) = \n Cubic root</item>

@@ -13,7 +13,7 @@ fun getUnderlinedText(text: String): SpannableString{
     return spannable
 }
 
-/* Made the line bold from index Start to index End (all inclusive) */
+/* Make the line bold from index Start to index End (all inclusive) */
 fun getBoldText(text: String, start:Int, end:Int): SpannableString{
     val spannable = SpannableString(text)
     spannable.setSpan(StyleSpan(Typeface.BOLD), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)

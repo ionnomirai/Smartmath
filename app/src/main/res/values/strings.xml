@@ -6,9 +6,8 @@
     <string name="dichotomy_name">Dichotomy</string>
     <string name="dichotomy_name_underlined"><u>Dichotomy</u></string>
     <string name="dichotomy_detailed">Dichotomy\ndetailed solution</string>
-    <string name="golden_section_name">Golden Section</string>
-    <string name="golden_section_name_underlined"><u>Golden Section</u></string>
-    <string name="golden_section_detailed">Golden Section: detailed solution</string>
+    <string name="golden_section_name">Golden section</string>
+    <string name="golden_section_detailed">Golden section\ndetailed solution</string>
 
     <string name="title_expression">Expression:</string>
     <string name="title_borders">Borders:</string>

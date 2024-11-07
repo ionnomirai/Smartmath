@@ -1,5 +1,6 @@
 package com.example.smartmath.methods.dataclasses
 
+/* All necessary fields for Dihotomy and Golden section */
 data class StateMinABE(
     val a: Double,
     val b: Double,
