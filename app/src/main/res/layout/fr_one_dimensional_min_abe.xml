@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/ivBackground"
+        android:id="@+id/ivBackground0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/image_of_background_fr_one_dim"
@@ -169,8 +169,7 @@
         android:id="@+id/bFindSolution"
         style="@style/ButtonMedium500"
         android:text="@string/find_solution"
-        android:layout_marginHorizontal="70dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/etAccuracy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -178,7 +177,7 @@
     <TextView
         android:id="@+id/tvDividerFirst"
         style="@style/DividerLine"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/bFindSolution"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -202,10 +201,9 @@
         style="@style/TitleTopScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:text="@string/title_solution_underlined"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvDividerThird" />
@@ -250,11 +248,14 @@
         android:id="@+id/bShowDetailedSolution"
         style="@style/ButtonMedium500"
         android:layout_marginHorizontal="70dp"
-        android:layout_marginTop="25sp"
+        android:layout_marginVertical="10dp"
         android:text="@string/title_detailed_solution"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFEnd" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFEnd"
+        app:layout_constraintVertical_bias="0.236" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
