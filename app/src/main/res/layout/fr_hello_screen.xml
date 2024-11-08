@@ -21,12 +21,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
+        android:layout_width="244dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="60dp"
         android:contentDescription="@string/image_of_cube"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91"
         app:srcCompat="@drawable/img_cube" />
 </androidx.constraintlayout.widget.ConstraintLayout>
