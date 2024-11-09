@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import androidx.fragment.app.transaction
 import androidx.lifecycle.lifecycleScope
+import com.example.smartmath.R
 import com.example.smartmath.databinding.FrHelloScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -38,7 +41,10 @@ class FrHelloScreen: Fragment() {
 
         viewLifecycleOwner.lifecycleScope.launch {
             delay(2000L)
-            Toast.makeText(context, "Move to the next fragment", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.commit {
+                replace(R.id.fcvMain, FrMainScreen())
+                setReorderingAllowed(true)
+            }
         }
     }
 

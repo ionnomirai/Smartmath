@@ -53,4 +53,7 @@ dependencies {
     /* Fragment and ViewModel
 * - parentFragmentManager.commit{}*/
     implementation("androidx.fragment:fragment-ktx:1.8.2")
+
+    /* Math library */
+    implementation ("net.objecthunter:exp4j:0.4.8")
 }
