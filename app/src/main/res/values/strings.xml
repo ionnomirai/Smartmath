@@ -29,6 +29,8 @@
     <string name="char_bracket_start">[</string>
     <string name="char_bracket_end">]</string>
     <string name="char_zero">0</string>
+    <string name="char_two">2</string>
+    <string name="char_three">3</string>
     <string name="char_semicolon">;</string>
 
     <string name="find_solution">Find a solution</string>

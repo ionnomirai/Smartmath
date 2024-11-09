@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="12dp"
+        android:layout_marginBottom="12dp"
         app:cardElevation="7dp"
         app:cardBackgroundColor="@color/temp_d_help_background"
         app:layout_constraintBottom_toBottomOf="parent"

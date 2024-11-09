@@ -1,12 +1,15 @@
 package com.example.smartmath.fragments
 
 import android.os.Bundle
+import android.text.TextUtils
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import com.example.smartmath.R
@@ -80,7 +83,7 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
                 } catch (e: NumberFormatException) {
                     Toast.makeText(activity, "Empty input", Toast.LENGTH_SHORT).show()
                 } catch (e: Exception) {
-                    Toast.makeText(activity, "Error my", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -110,8 +113,14 @@ class FrOneDimensionalMinABE(val methodName: MethodNames) : Fragment() {
             gHidenSolution.visibility = View.VISIBLE
 
             // reset bottom restriction for tvSolution
-            ((tvSolution.layoutParams) as ConstraintLayout.LayoutParams).bottomToBottom =
-                ConstraintLayout.LayoutParams.UNSET
+            ((tvSolution.layoutParams) as ConstraintLayout.LayoutParams).apply {
+                bottomToBottom = ConstraintLayout.LayoutParams.UNSET
+
+                // set topMargin. We 30 dp transform to px (topMargin function need px)
+                val  scale = resources.displayMetrics.density
+                topMargin = (30 * scale).toInt()
+            }
+
         }
     }
 
