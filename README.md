@@ -20,17 +20,17 @@ After finding a solution that satisfies the given conditions, all data obtained 
 * net.objecthunter:exp4j
 
 ## Visual demonstration of the project
-<img width="265" alt="0" src="https://github.com/user-attachments/assets/6cda389f-0494-4daf-86d1-637facd733f4">
-<img width="265" alt="1" src="https://github.com/user-attachments/assets/76410e06-3c01-4393-8066-6d2323339fb1">
-<img width="265" alt="2_1_1" src="https://github.com/user-attachments/assets/8c7134b7-8232-4198-8d32-b4a484edf396">
+<img width="265" alt="0" src="https://github.com/user-attachments/assets/663807df-ea05-4dc7-af12-b44ba725fe9b">
+<img width="265" alt="1" src="https://github.com/user-attachments/assets/426d21cd-0523-4b3c-a88e-b02492625b7e">
+<img width="265" alt="2_1_1" src="https://github.com/user-attachments/assets/5ecfe287-645f-4bdf-b7dc-eb62f34753db">
 
-<img width="265" alt="2_1_3" src="https://github.com/user-attachments/assets/fb34f73b-9133-4967-8ea1-6d10d531a72c">
-<img width="265" alt="2_2_1" src="https://github.com/user-attachments/assets/c4a21afb-14eb-4067-888c-b41b9ffead9c">
-<img width="265" alt="2_2_2" src="https://github.com/user-attachments/assets/c9488dd1-7c06-4771-9825-76737accadb9">
+<img width="265" alt="2_1_3" src="https://github.com/user-attachments/assets/9153986e-069a-4a38-98f4-5d4fbc75a826">
+<img width="265" alt="2_2_1" src="https://github.com/user-attachments/assets/66a340b2-42f1-4fa2-9183-9380d5b86431">
+<img width="265" alt="2_2_2" src="https://github.com/user-attachments/assets/936747e2-4808-466d-8d24-e99d83cbbb55">
 
-<img width="265" alt="2_2_h" src="(https://github.com/user-attachments/assets/33b76c32-e5e2-4727-95ec-7c78cd88bdaa">
-<img width="265" alt="3_2_1" src="https://github.com/user-attachments/assets/02af46d7-9c38-49fe-bbfe-7105692b2bfd">
-<img width="265" alt="3_2_2" src="https://github.com/user-attachments/assets/4729a6fa-ffe3-4d57-b70e-a6af4d7efc0d">
+<img width="265" alt="2_2_h" src="https://github.com/user-attachments/assets/c05ce62a-4c12-4939-8341-b44851cd456e">
+<img width="265" alt="3_2_1" src="https://github.com/user-attachments/assets/3a802608-71e7-44c0-b7ae-ef7145aeaa9f">
+<img width="265" alt="3_2_2" src="https://github.com/user-attachments/assets/7235f24a-b84f-4237-af77-fa703661d3b5">
 
 ## Authors:
 * Code developed by Mykhailo Teslia (https://github.com/ionnomirai)
